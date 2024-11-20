@@ -1,11 +1,13 @@
 'use server'
 
 import { revalidatePath } from "next/cache"
+import { cookies } from "next/headers"
 
 export async function createSerie(data:FormData){
     const url = process.env.URL_API
+    const token = (await cookies()).get('tath')
 
-    var res = await fetch(`${url}/api/products/createserie`, { method:'POST', body: data})
+    var res = await fetch(`${url}/api/products/createserie`, { method:'POST', body: data, headers: {Cookie:`tath=${token!.value}`}})
         .then((res) => res.json())
 
     if(res.ok){
@@ -19,9 +21,10 @@ export async function createSerie(data:FormData){
 
 export async function createVol(data:FormData){
     const url = process.env.URL_API
+    const token = (await cookies()).get('tath')
 
     var res = await fetch(`${url}/api/products/createvol`, {
-        method:'POST', body: data
+        method:'POST', body: data, headers: {Cookie:`tath=${token!.value}`}
     }).then((res) => res.json())
 
     if(res.ok){
@@ -35,8 +38,9 @@ export async function createVol(data:FormData){
 
 export async function deleteSerie(sku:String){
     const url = process.env.URL_API
+    const token = (await cookies()).get('tath')
 
-    var res = await fetch(`${url}/api/products/serie/${sku}`, { method:'DELETE'})
+    var res = await fetch(`${url}/api/products/serie/${sku}`, { method:'DELETE', headers: {Cookie:`tath=${token!.value}`}})
         .then((res) => res.json())
 
     if(res.ok){
@@ -50,8 +54,9 @@ export async function deleteSerie(sku:String){
 
 export async function deleteVol(sku:String){
     const url = process.env.URL_API
+    const token = (await cookies()).get('tath')
 
-    var res = await fetch(`${url}/api/products/serie/vol/${sku}`, { method:'DELETE'})
+    var res = await fetch(`${url}/api/products/serie/vol/${sku}`, { method:'DELETE', headers: {Cookie:`tath=${token!.value}`}})
         .then((res) => res.json())
 
     if(res.ok){

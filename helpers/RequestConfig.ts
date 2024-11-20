@@ -1,6 +1,7 @@
 'use server'
 
 import { revalidatePath } from "next/cache"
+import { cookies } from "next/headers"
 
 export async function getConfig(){
     const url = process.env.URL_API
@@ -18,13 +19,14 @@ export async function getConfig(){
 
 export async function createGender(gender:string){
     const url = process.env.URL_API
+    const token = (await cookies()).get('tath')
 
     var gen = {
         value: gender.toLowerCase(),
         label: gender
     }
 
-    var res = await fetch(`${url}/cfs/gender/create`, {method: 'POST', body: JSON.stringify(gen), headers: { 'Content-Type': 'application/json'}}).then((res) => res.json())
+    var res = await fetch(`${url}/cfs/gender/create`, {method: 'POST', body: JSON.stringify(gen), headers: { 'Content-Type': 'application/json', Cookie:`tath=${token!.value}`}}).then((res) => res.json())
 
     if(res.ok){
         revalidatePath('/tsk/admin/config')
@@ -38,8 +40,9 @@ export async function createGender(gender:string){
 
 export async function deleteGender(value:string|null|undefined){
     const url = process.env.URL_API
+    const token = (await cookies()).get('tath')
 
-    var res = await fetch(`${url}/cfs/gender/${value}`, {method: 'DELETE'}).then((res) => res.json())
+    var res = await fetch(`${url}/cfs/gender/${value}`, {method: 'DELETE', headers: {Cookie:`tath=${token!.value}`}}).then((res) => res.json())
 
     if(res.ok){
         revalidatePath('/tsk/admin/config')
@@ -52,12 +55,13 @@ export async function deleteGender(value:string|null|undefined){
 
 export async function changeMaintance(data:FormData){
     const url = process.env.URL_API
+    const token = (await cookies()).get('tath')
 
     var maintance = {
         maintance: data.get('maintance')
     }
     
-    var res = await fetch(`${url}/cfs/mnt`, {method: 'POST', body: JSON.stringify(maintance), headers: { 'Content-Type': 'application/json'}}).then((res) => res.json())
+    var res = await fetch(`${url}/cfs/mnt`, {method: 'POST', body: JSON.stringify(maintance), headers: { 'Content-Type': 'application/json',Cookie:`tath=${token!.value}`}}).then((res) => res.json())
 
     if(res.ok){
         revalidatePath('/tsk/admin/config')
