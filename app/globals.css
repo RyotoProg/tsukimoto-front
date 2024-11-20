@@ -2,26 +2,1110 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth!important;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: #27528e;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.imgNav {
+  width: 50px;
+  height: 50px;
 }
+
+.imgNavSocial{
+  width: 30px;
+  height: 30px;
+}
+
+.waves {
+    position: absolute;
+    /* left: 0;
+    right: 0;
+    height: 200px;
+    bottom: 0; */
+    top: 200px;
+    bottom: -135px;
+    height: 527px;
+    width: 100%;
+    overflow: hidden;
+    z-index: -10;
+  }
+  .wave {
+    position: absolute;
+    left: -180px;
+    bottom: 0;
+    /*width: 200px;*/
+    /*height: 200px;*/
+    /*width: 100%;*/
+    /*border-radius: 50%;*/
+    /*background:rgba(0,0,0, .3);*/
+    width: 2402px;
+    height: 427px;
+    background: url(/waves.png) center bottom no-repeat;
+    animation: 5s wave ease-in-out infinite alternate;
+  }
+  .wave.a {
+    background-position: 0 -854px;
+  }
+  .wave.b {
+    background-position: 0 -427px;
+    animation-delay: .6s;
+  }
+  .wave.c {
+    background-position: 0 0;
+    animation-delay: 1.2s;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: translate(0 , 0);
+    }
+    50% {
+      transform: translate(-80px, 30px);
+    }
+    100% {
+      transform: translate(160px, -60px);
+    }
+  }
+
+  /* .btnav {
+  position: relative;
+  background-color: #DDDDDDEE;
+  border-radius: 40% 40% 0 0;
+}
+
+.btnav::before {
+  content: '';
+  position: absolute;
+
+  background-color: transparent;
+  left: -20px;
+  top: 28px;
+  height: 20px;
+  width: 20px;
+  border-bottom-right-radius: 70%;
+  box-shadow: 1px 10px 0 0 #DDDDDDEE;
+}
+
+.btnav::after {
+  content: '';
+  position: absolute;
+
+  background-color: transparent;
+  left: 40px;
+  top: 28px;
+  height: 20px;
+  width: 20px;
+  border-bottom-left-radius: 70%;
+  box-shadow: 0 10px 0 0 #DDDDDDEE;
+} */
+
+  @media (min-width: 1920px) {
+    body{
+      font-size: 1.7rem;
+    }
+
+    /* header */
+    .headLink {
+      font-size: 1.7rem;
+    }
+
+    .imgNav{
+      width: 100px;
+      height: 100px;
+    }
+
+    .imgNavSocial {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* home */
+    .imgHome {
+      width: 800px;
+      height: 600px;
+    }
+
+    .waves {
+      height: 840px;
+    }
+
+    /* news */
+
+    .news {
+      font-size: 2.2rem;
+      padding-bottom: 20px;
+    }
+
+    .titleNew {
+      font-size: 1.9rem;
+      padding-bottom: 10px;
+    }
+
+    .new{
+      font-size: 1.7rem;
+    }
+
+    /* series */
+    .series {
+      font-size: 2.2rem;
+      padding-bottom: 20px;
+    }
+
+    .imgNewSerie {
+      width: 400px;
+      height: 600px;
+    }
+
+    .imgVols {
+      width: 150px;
+      height: 300px;
+    }
+
+    /* shops */
+    .stores {
+      font-size: 2.2rem;
+      padding-bottom: 20px;
+    }
+
+    .imgShop {
+      width: 300px;
+      height: 300px;
+    }
+
+    .region {
+      font-size: 1.9rem;
+    }
+
+    .commune {
+      font-size: 1.7rem;
+    }
+
+    /* footer */
+    .imgFooterSocial {
+      width: 50px;
+      height: 50px;
+    }
+
+    .aboutLink {
+      font-size: 1.6rem;
+    }
+
+    .contactText {
+      font-size: 1.6rem;
+    }
+
+    .infoTitle {
+      font-size: 1.9rem;
+    }
+
+    .infoText {
+      font-size: 1.6rem;
+    }
+
+    /* news page */
+    .newSection {
+      height: 700px;
+    }
+
+    .newH2 {
+      font-size: 2.2rem;
+    }
+
+    .newTitle {
+      font-size: 1.9rem;
+    }
+
+    .newPageTitle {
+      font-size: 2.4rem;
+    }
+
+    .preview {
+      font-size: 1.6rem;
+    }
+    
+    .date {
+      font-size: 1.6rem;
+    }
+
+    .imgNewContent {
+      width: 500px;
+      height: 500px;
+    }
+  }
+
+  @media (min-width: 1440px) and (max-width: 1919px) and (min-height: 900px) {
+    body{
+      font-size: 1.7rem;
+    }
+
+    /* header */
+    .headLink {
+      font-size: 1.5rem;
+    }
+
+    .imgNav{
+      width: 80px;
+      height: 80px;
+    }
+
+    .imgNavSocial {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* home */
+    .imgHome {
+      width: 700px;
+      height: 500px;
+    }
+
+    .waves {
+      height: 670px;
+    }
+
+    /* news */
+
+    .news {
+      font-size: 2.1rem;
+      padding-bottom: 20px;
+    }
+
+    .titleNew {
+      font-size: 1.8rem;
+      padding-bottom: 10px;
+    }
+
+    .new{
+      font-size: 1.6rem;
+    }
+
+    /* series */
+    .series {
+      font-size: 2.1rem;
+      padding-bottom: 20px;
+    }
+
+    .imgNewSerie {
+      width: 300px;
+      height: 500px;
+    }
+
+    .imgVols {
+      width: 150px;
+      height: 300px;
+    }
+
+    /* shops */
+    .stores {
+      font-size: 2.1rem;
+      padding-bottom: 20px;
+    }
+
+    .imgShop {
+      width: 250px;
+      height: 250px;
+    }
+
+    .region {
+      font-size: 1.8rem;
+    }
+
+    .commune {
+      font-size: 1.6rem;
+    }
+
+    /* footer */
+    .imgFooterSocial {
+      width: 70px;
+      height: 70px;
+    }
+
+    .aboutLink {
+      font-size: 1.5rem;
+    }
+
+    .contactText {
+      font-size: 1.5rem;
+    }
+
+    .infoTitle {
+      font-size: 1.8rem;
+      padding-left: 5px;
+    }
+
+    .infoText {
+      font-size: 1.5rem;
+      padding-left: 5px;
+    }
+
+    /* news page */
+    .newSection {
+      height: 560px;
+    }
+
+    .newH2 {
+      font-size: 2.1rem;
+    }
+
+    .newTitle {
+      font-size: 1.8rem;
+    }
+
+    .newPageTitle {
+      font-size: 2.3rem;
+    }
+
+    .preview {
+      font-size: 1.5rem;
+    }
+    
+    .date {
+      font-size: 1.5rem;
+    }
+
+    .imgNewContent {
+      width: 400px;
+      height: 400px;
+    }
+  }
+
+  @media (min-width: 1366px) and (max-width: 1439px) {
+    body{
+      font-size: 1.5rem;
+    }
+
+    /* header */
+    .headLink {
+      font-size: 1.4rem;
+    }
+
+    .imgNav{
+      width: 70px;
+      height: 70px;
+    }
+
+    .imgNavSocial {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* home */
+    .imgHome {
+      width: 600px;
+      height: 400px;
+    }
+
+    .waves {
+      height: 560px;
+    }
+
+    /* news */
+
+    .news {
+      font-size: 2rem;
+      padding-bottom: 20px;
+    }
+
+    .titleNew {
+      font-size: 1.7rem;
+      padding-bottom: 10px;
+    }
+
+    .new{
+      font-size: 1.5rem;
+    }
+
+    /* series */
+    .series {
+      font-size: 2rem;
+      padding-bottom: 20px;
+    }
+
+    .imgNewSerie {
+      width: 250px;
+      height: 450px;
+    }
+
+    .imgVols {
+      width: 150px;
+      height: 300px;
+    }
+
+    /* shops */
+    .stores {
+      font-size: 2rem;
+      padding-bottom: 20px;
+    }
+
+    .imgShop {
+      width: 250px;
+      height: 250px;
+    }
+
+    .region {
+      font-size: 1.7rem;
+    }
+
+    .commune {
+      font-size: 1.5rem;
+    }
+
+    /* footer */
+    .imgFooterSocial {
+      width: 70px;
+      height: 70px;
+    }
+
+    .aboutLink {
+      font-size: 1.5rem;
+    }
+
+    .contactText {
+      font-size: 1.5rem;
+    }
+
+    .infoTitle {
+      font-size: 1.8rem;
+      padding-left: 5px;
+    }
+
+    .infoText {
+      font-size: 1.5rem;
+      padding-left: 5px;
+    }
+
+    /* news page */
+    .newSection {
+      height: 440px;
+    }
+
+    .newH2 {
+      font-size: 2rem;
+    }
+
+    .newTitle {
+      font-size: 1.8rem;
+    }
+
+    .newPageTitle {
+      font-size: 2.3rem;
+    }
+
+    .preview {
+      font-size: 1.5rem;
+    }
+    
+    .date {
+      font-size: 1.5rem;
+    }
+
+    .imgNewContent {
+      width: 400px;
+      height: 400px;
+    }
+  }
+
+  @media (min-width: 720px) and (max-width: 1365px) {
+    body{
+      font-size: 1.5rem;
+    }
+
+    /* header */
+    .headLink {
+      font-size: 1.4rem;
+    }
+
+    .imgNav{
+      width: 70px;
+      height: 70px;
+    }
+
+    .imgNavSocial {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* home */
+    .imgHome {
+      margin-top: 150px;
+      width: 500px;
+      height: 300px;
+    }
+
+    .waves {
+      height: 1000px;
+    }
+
+    /* news */
+
+    .news {
+      font-size: 2rem;
+      padding-bottom: 20px;
+    }
+
+    .titleNew {
+      font-size: 1.5rem;
+      padding-bottom: 10px;
+    }
+
+    .new{
+      font-size: 1.3rem;
+    }
+
+    /* series */
+    .series {
+      font-size: 2rem;
+      padding-bottom: 20px;
+    }
+
+    .imgNewSerie {
+      width: 150px;
+      height: 350px;
+    }
+
+    .imgVols {
+      width: 100px;
+      height: 250px;
+    }
+
+    .containerSerie {
+      padding: 0 20px 0 20px;
+    }
+
+    .textLastVol {
+      font-size: 1rem;
+    }
+
+    .textTitleSerie{
+      font-size: 1.5rem;
+    }
+
+    .textSerie{
+      font-size: 1.3rem;
+    }
+
+    /* shops */
+    .stores {
+      font-size: 2rem;
+      padding-bottom: 20px;
+    }
+
+    .imgShop {
+      width: 200px;
+      height: 200px;
+    }
+
+    .region {
+      font-size: 1.5rem;
+    }
+
+    .commune {
+      font-size: 1.3rem;
+    }
+
+    /* footer */
+    .footer {
+      flex-direction: column;
+    }
+
+    .containerFooter{
+      margin-bottom: .5rem;
+    }
+
+    .imgFooterSocial {
+      width: 70px;
+      height: 70px;
+    }
+
+    .aboutLink {
+      font-size: 1.5rem;
+    }
+
+    .contactText {
+      font-size: 1.5rem;
+    }
+
+    .infoTitle {
+      font-size: 1.8rem;
+      padding-left: 5px;
+    }
+
+    .infoText {
+      font-size: 1.5rem;
+      padding-left: 5px;
+    }
+
+    /* news page */
+    .newSection {
+      height: 780px;
+    }
+
+    .newH2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .containerNew {
+      grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+
+    .imgNew {
+      width: 300px;
+      height: 200px;
+    }
+
+    .newTitle {
+      font-size: 1.8rem;
+    }
+
+    .newPageTitle {
+      font-size: 2.1rem;
+    }
+
+    .preview {
+      font-size: 1.3rem;
+    }
+    
+    .date {
+      font-size: 1.3rem;
+    }
+
+    .contentContainer {
+      width: auto;
+    }
+
+    .containerNew {
+      flex-direction: column;
+    }
+
+    .imgNewContent {
+      width: 400px;
+      height: 400px;
+    }
+
+    .containerImg {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media (min-width: 375px) and (max-width: 719px) {
+    body{
+      font-size: 1.5rem;
+    }
+
+    /* header */
+    .headLink {
+      font-size: 1.4rem;
+    }
+
+    .imgNav{
+      width: 70px;
+      height: 70px;
+    }
+
+    .imgNavSocial {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* home */
+    .imgHome {
+      margin-top: 10px;
+      width: 300px;
+      height: 200px;
+    }
+
+    .waves {
+      height: 400px;
+    }
+
+    /* news */
+
+    .news {
+      font-size: 1.8rem;
+      padding-bottom: 20px;
+    }
+
+    .titleNew {
+      font-size: 1.3rem;
+      padding-bottom: 10px;
+    }
+
+    .new{
+      font-size: 1.1rem;
+    }
+
+    .linkNews {
+      font-size: 1.3rem;
+    }
+
+    .newSection {
+      padding: 0 100px 0 10px;
+    }
+
+    /* series */
+    .series {
+      font-size: 2rem;
+      padding-bottom: 20px;
+    }
+
+    .imgNewSerie {
+      width: 150px;
+      height: 350px;
+    }
+
+    .imgVols {
+      width: 100px;
+      height: 250px;
+    }
+
+    .containerSerie {
+      padding: 0 20px 0 20px;
+    }
+
+    .textLastVol {
+      font-size: 1rem;
+    }
+
+    .textTitleSerie{
+      font-size: 1.5rem;
+    }
+
+    .textSerie{
+      font-size: 1.3rem;
+    }
+
+    /* shops */
+    .stores {
+      font-size: 2rem;
+      padding-bottom: 20px;
+    }
+
+    .imgShop {
+      width: 150px;
+      height: 150px;
+    }
+
+    .region {
+      font-size: 1.5rem;
+    }
+
+    .commune {
+      font-size: 1.3rem;
+    }
+
+    /* footer */
+    .footer {
+      flex-direction: column;
+    }
+
+    .containerFooter{
+      margin-bottom: .5rem;
+    }
+
+    .imgFooterSocial {
+      width: 70px;
+      height: 70px;
+    }
+
+    .aboutLink {
+      font-size: 1.5rem;
+    }
+
+    .contactText {
+      font-size: 1.5rem;
+    }
+
+    .infoTitle {
+      font-size: 1.8rem;
+      padding-left: 5px;
+    }
+
+    .infoText {
+      font-size: 1.5rem;
+      padding-left: 5px;
+    }
+
+    /* news page */
+    .newSection {
+      height: 550px;
+    }
+
+    .newH2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .containerNew {
+      grid-template-columns: repeat(1, minmax(0,1fr));
+    }
+
+    .imgNew {
+      width: 300px;
+      height: 200px;
+    }
+
+    .newTitle {
+      font-size: 1.8rem;
+    }
+
+    .containerPreview{
+      grid-template-columns: repeat(1, minmax(0,1fr));
+    }
+
+    .newPageTitle {
+      font-size: 2.1rem;
+    }
+
+    .preview {
+      font-size: 1.2rem;
+    }
+    
+    .date {
+      font-size: 1.2rem;
+    }
+
+    .contentContainer {
+      width: auto;
+      margin: 0;
+    }
+
+    .content {
+      margin-top: 20px;
+    }
+
+    .content p{
+      font-size: 1.2rem;
+    }
+
+    .containerNew {
+      flex-direction: column;
+    }
+
+    .imgNewContent {
+      margin: 0;
+      width: 300px;
+      height: 300px;
+    }
+
+    .containerImg {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 374px) {
+    body{
+      font-size: 1.5rem;
+    }
+
+    /* header */
+    .headLink {
+      font-size: 1.4rem;
+    }
+
+    .imgNav{
+      width: 70px;
+      height: 70px;
+    }
+
+    .imgNavSocial {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* home */
+    .imgHome {
+      margin-top: 10px;
+      width: 300px;
+      height: 200px;
+    }
+
+    .waves {
+      height: 400px;
+    }
+
+    /* news */
+
+    .news {
+      font-size: 1.8rem;
+      padding-bottom: 20px;
+    }
+
+    .titleNew {
+      font-size: 1.3rem;
+      padding-bottom: 10px;
+    }
+
+    .new{
+      font-size: 1.1rem;
+    }
+
+    .linkNews {
+      font-size: 1.3rem;
+    }
+
+    .newSection {
+      padding: 0 100px 0 50px;
+    }
+
+    .size-40 {
+      width: 9rem;
+      height: 9rem;
+    }
+
+    /* series */
+    .series {
+      font-size: 2rem;
+      padding-bottom: 20px;
+    }
+
+    .imgNewSerie {
+      width: 150px;
+      height: 350px;
+    }
+
+    .imgVols {
+      width: 100px;
+      height: 250px;
+    }
+
+    .containerSerie {
+      padding: 0 20px 0 20px;
+    }
+
+    .textLastVol {
+      font-size: 1rem;
+    }
+
+    .textTitleSerie{
+      font-size: 1.5rem;
+    }
+
+    .textSerie{
+      font-size: 1.3rem;
+    }
+
+    /* shops */
+    .stores {
+      font-size: 2rem;
+      padding-bottom: 20px;
+    }
+
+    .imgShop {
+      width: 150px;
+      height: 150px;
+    }
+
+    .region {
+      font-size: 1.5rem;
+    }
+
+    .commune {
+      font-size: 1.3rem;
+    }
+
+    /* footer */
+    .footer {
+      flex-direction: column;
+    }
+
+    .containerFooter{
+      margin-bottom: .5rem;
+    }
+
+    .imgFooterSocial {
+      width: 70px;
+      height: 70px;
+    }
+
+    .aboutLink {
+      font-size: 1.5rem;
+    }
+
+    .contactText {
+      font-size: 1.5rem;
+    }
+
+    .infoTitle {
+      font-size: 1.8rem;
+      padding-left: 5px;
+    }
+
+    .infoText {
+      font-size: 1.5rem;
+      padding-left: 5px;
+    }
+
+    /* news page */
+    .newSection {
+      height: 540px;
+    }
+
+    .newH2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .containerNew {
+      grid-template-columns: repeat(1, minmax(0,1fr));
+    }
+
+    .imgNew {
+      width: 300px;
+      height: 200px;
+    }
+
+    .newTitle {
+      font-size: 1.8rem;
+    }
+
+    .containerPreview{
+      grid-template-columns: repeat(1, minmax(0,1fr));
+    }
+
+    .newPageTitle {
+      font-size: 2.1rem;
+    }
+
+    .preview {
+      font-size: 1.2rem;
+    }
+    
+    .date {
+      font-size: 1.2rem;
+    }
+
+    .contentContainer {
+      width: auto;
+      margin: 0;
+    }
+
+    .content {
+      margin-top: 20px;
+    }
+
+    .content p{
+      font-size: 1.2rem;
+    }
+
+    .containerNew {
+      flex-direction: column;
+    }
+
+    .imgNewContent {
+      margin: 0;
+      width: 300px;
+      height: 300px;
+    }
+
+    .containerImg {
+      display: flex;
+      justify-content: center;
+    }
+  }

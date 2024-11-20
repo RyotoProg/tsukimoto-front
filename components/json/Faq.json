@@ -1,0 +1,20 @@
+{
+    "questions": [
+        {
+            "question": "Sobre nosotros",
+            "answer": "Fundada para entregar un nuevo método de lectura y entretención a los amantes de las historias.<br/><br/> comprometidos en publicar las mejores obras, por personas que les apasiona el trabajo que realizan."
+        },
+        {
+            "question": "Nuestra mision",
+            "answer": "Nuestra misión es la creación, publicación y expansión de nuevos tipos de literaturas en el mercado, promoviendo una lectura alternativa a la población juvenil, entregando productos de calidad y acorde a los estándares internacionales.<br/><br/>Para lograr nuestros objetivos, la responsabilidad del equipo de trabajo es una de nuestras prioridades fundamentales, junto a la busqueda de talentos nuevos que nos vean como una alternativa confiable para presentar sus creaciones."
+        },
+        {
+            "question": "Nuestros logros",
+            "answer": "Tsukimoto Editorial es responsable de la Primera Novela Ligera publicada oficialmente en Latinoamérica, manteniendo su formato originado en Japón.<br/><br/> Con presencia en las ciudades más importantes del centro y sur de Chile, se han superado las más de 200 copias vendidas en un periodo menor a dos años."
+        },
+        {
+            "question": "Timeline",
+            "answer": "2022 - Tsukimoto Editorial es fundada para entregar una nueva alternativa a escritores e ilustradores, lanzando su primera obra \"Una Historia Llamada Destino\""
+        }
+    ]
+}
