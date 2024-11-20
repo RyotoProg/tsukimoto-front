@@ -28,7 +28,7 @@ export async function getNews(){
         return res.data
     }
 
-    throw new Error(res.error)
+    return []
 }
 
 export async function getNew(id:string){
@@ -41,7 +41,7 @@ export async function getNew(id:string){
         return res.data
     }
 
-    //throw new Error(res.error)
+    return []
 }
 
 export async function deleteNew(id:string){

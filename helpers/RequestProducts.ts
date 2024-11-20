@@ -77,8 +77,8 @@ export async function getProducts(){
     if(res.ok){
         return res.products
     }
-
-    throw new Error(res.error)
+    
+    return []
 }
 
 export async function getLastSerie(){
@@ -91,5 +91,5 @@ export async function getLastSerie(){
         return res.serie
     }
 
-    throw new Error(res.error)
+    return []
 }

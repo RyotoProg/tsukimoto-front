@@ -43,7 +43,7 @@ export async function getShops(){
         return res.data
     }
 
-    throw new Error(res.error)
+    return []
 }
 
 export async function getShopsHome(){
@@ -63,7 +63,7 @@ export async function getShopsHome(){
         return r
     }
 
-    throw new Error(res.error)
+    return []
 }
 
 export async function deleteShop(id:string){

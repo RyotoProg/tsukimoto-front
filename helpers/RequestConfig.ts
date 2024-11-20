@@ -14,7 +14,7 @@ export async function getConfig(){
         return config
     }
 
-    throw new Error(res.error)
+    return []
 }
 
 export async function createGender(gender:string){
