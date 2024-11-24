@@ -1,3 +1,4 @@
+'use server'
 import { getNews } from '@/helpers/RequestNews'
 import Link from 'next/link'
 import React from 'react'

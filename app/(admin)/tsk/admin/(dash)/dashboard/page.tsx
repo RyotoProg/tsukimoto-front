@@ -1,6 +1,7 @@
+'use server'
 import React from 'react'
 
-export default function Dash() {
+export default async function Dash() {
   return (
     <div>Dash</div>
   )

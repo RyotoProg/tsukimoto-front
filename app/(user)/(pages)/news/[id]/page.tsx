@@ -1,3 +1,4 @@
+'use server'
 import { getNew } from '@/helpers/RequestNews'
 import React from 'react'
 import parser from 'html-react-parser'

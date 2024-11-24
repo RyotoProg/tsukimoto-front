@@ -1,3 +1,4 @@
+'use server'
 import HomeLogo from "@/components/home/HomeLogo";
 import News from "@/components/home/News";
 import Series from "@/components/home/Series";
@@ -16,8 +17,8 @@ export default async function Home() {
         <HomeLogo/>
       </div>
       <News/>
-      <Series serie={serie} url={url}/>
-      <Stores data={data} url={url}/>
+      {serie.length != 0 ? (<Series serie={serie} url={url}/>):''}
+      {data.length != 0 ? (<Stores data={data} url={url}/>):''}
     </>
   );
 }

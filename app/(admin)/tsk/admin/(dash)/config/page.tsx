@@ -1,3 +1,4 @@
+'use server'
 import FormConfig from '@/components/admin/FormConfig'
 import { getConfig } from '@/helpers/RequestConfig'
 import React from 'react'

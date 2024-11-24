@@ -1,3 +1,4 @@
+'use server'
 import Header from '@/components/admin/Header'
 import { getNew } from '@/helpers/RequestNews'
 import React from 'react'

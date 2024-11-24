@@ -1,3 +1,4 @@
+'use server'
 import Header from '@/components/admin/Header'
 import ButtonDel from '@/components/admin/shops/ButtonDel'
 import { getShops } from '@/helpers/RequestShop'
@@ -21,7 +22,7 @@ export default async function Shops() {
               <th scope='col'>Opciones</th>
             </tr>
           </thead>
-          <tbody>
+          {data.length != 0 ? (<tbody>
           {data.map((el:any) => {
           return (
           <tr key={el._id} className='border-b text-wrap'>
@@ -32,7 +33,7 @@ export default async function Shops() {
           </tr>
           )
         })}
-          </tbody>
+          </tbody>): ''}
         </table>
     </div>
   )

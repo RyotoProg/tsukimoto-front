@@ -1,3 +1,4 @@
+'use server'
 import Header from '@/components/admin/Header'
 import ButtonDel from '@/components/admin/news/ButtonDel'
 import { getNews } from '@/helpers/RequestNews'
