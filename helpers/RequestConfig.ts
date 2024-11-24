@@ -5,8 +5,9 @@ import { cookies } from "next/headers"
 
 export async function getConfig(){
     const url = process.env.URL_API
+    const token = (await cookies()).get('tath')
 
-    var res = await fetch(`${url}/cfs/config`, { method: 'GET', next: {revalidate: 1}}).then((res) => res.json())
+    var res = await fetch(`${url}/cfs/config`, { method: 'GET', next: {revalidate: 1}, headers: { 'Content-Type': 'application/json', Cookie:`tath=${token!.value}`}}).then((res) => res.json())
     
     var config = res.confi
 
