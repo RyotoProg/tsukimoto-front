@@ -2,6 +2,7 @@
 
 import { revalidatePath } from "next/cache"
 import { cookies } from "next/headers"
+import { notFound } from "next/navigation"
 
 export async function getConfig(){
     const url = process.env.URL_API
@@ -15,7 +16,9 @@ export async function getConfig(){
         return config
     }
 
-    return []
+    return {
+        notFound: true
+    }
 }
 
 export async function createGender(gender:string){
